@@ -12,7 +12,7 @@ Seguindo o padrão REST, é possível criar, buscar, atualizar e remover uma ent
 
 Exemplo:
   Cadastrar Cliente:
-    Método: POSTO
+    Método: POST
     URL: http://root/PetzAPI/cliete
     Content-type: application/json
     Body resquest: {"nome": "Vitor", "email": "teste@teste.com"}
@@ -29,9 +29,9 @@ Exemplo:
   
 Para implantação, configurar no servidor escolhido a conexão JDBC associando o JNDI 'app/petzJNDI' com o pool 'microsoft_sql_TESTEVitor_saPool'.
 
-O banco de dadods SQL deverá conter as seguintes tabelas:
+O banco de dados SQL deverá conter as seguintes tabelas:
 CREATE TABLE 'cliente'  (
-  'ID' int(11) NOT NULL AUTO_INCREMENT,
+  'ID' int NOT NULL AUTO_INCREMENT,
   'Nome' varchar(300)NOT NULL,
   'Documento' varchar(20)NULL DEFAULT NULL,
   'Telefone' varchar(20)NULL DEFAULT NULL,
@@ -40,9 +40,8 @@ CREATE TABLE 'cliente'  (
   PRIMARY KEY ('ID') 
 ) 
 
-
 CREATE TABLE 'pet'  (
-  'ID' int(11) NOT NULL AUTO_INCREMENT,
+  'ID' int NOT NULL AUTO_INCREMENT,
   'Nome' varchar(300) NOT NULL,
   'Tipo' varchar(100) NULL DEFAULT NULL,
   'Raca' varchar(100) NULL DEFAULT NULL,
