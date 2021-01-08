@@ -1,0 +1,6 @@
+com\petz\petzapi\Classe\RespostaPadrao.class
+com\petz\petzapi\Entidade\Cliente.class
+com\petz\petzapi\RepositorioBase.class
+com\petz\petzapi\ClienteREST.class
+com\petz\petzapi\ServicoREST.class
+com\petz\petzapi\ApplicationConfig.class
